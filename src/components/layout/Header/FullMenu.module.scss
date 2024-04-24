@@ -1,0 +1,57 @@
+@import '@/styles/common';
+
+.container {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(black, 0.4);
+
+  &.active {
+    display: block;
+  }
+
+  > .menus {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 2rem;
+    border-radius: 6px;
+
+    > .close {
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+    }
+    > .gnb {
+      display: flex;
+      gap: 2rem;
+      padding-right: 4rem;
+
+      > li {
+        white-space: nowrap;
+
+        > ul {
+          display: flex;
+          flex-direction: column;
+          gap: 0.75rem;
+
+          > li {
+            font-size: 0.875rem;
+
+            > a {
+              display: block;
+            }
+          }
+        }
+        > .menu {
+          font-size: 0.875rem;
+        }
+      }
+    }
+  }
+}

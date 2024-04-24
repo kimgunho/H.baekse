@@ -1,0 +1,19 @@
+$main-color: #00a098;
+$brown-color-10: #cfc5b3;
+$brown-color-20: #f6f3ed;
+$text-color-10: #333;
+$text-color-20: #666;
+
+@mixin layout {
+  width: 100%;
+  max-width: 90.5rem;
+  margin: auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+@mixin mobile {
+  @media screen and (max-width: 1080px) {
+    @content;
+  }
+}

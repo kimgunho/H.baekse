@@ -1,8 +1,8 @@
 import './styles/global.scss';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import MainLayout from './components/layout/MainLayout';
-import Main from './pages/main';
+import MainLayout from '@/components/layout/MainLayout';
+import Main from '@/pages/main';
 
 function AppRoutes() {
   return (

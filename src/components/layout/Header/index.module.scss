@@ -1,2 +1,83 @@
+@import '@/styles/common';
+
 .container {
+  border-bottom: 1px solid #f0f0f0;
+
+  > .wrapper {
+    @include layout;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    top: 0;
+
+    > .title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      white-space: nowrap;
+
+      > a {
+        color: $main-color;
+      }
+    }
+    > .gnb {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      @include mobile {
+        display: none;
+      }
+
+      > li {
+        position: relative;
+        font-size: 1.125rem;
+
+        &:hover {
+          > .menu {
+            color: $main-color;
+          }
+          > ul {
+            visibility: visible;
+            opacity: 1;
+            top: 1.875rem;
+          }
+        }
+
+        > .menu {
+          color: $text-color-10;
+          transition: color 0.2s;
+          padding-bottom: 0.625rem;
+        }
+        > ul {
+          visibility: hidden;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-color: white;
+          padding: 1rem 1.25rem;
+          border: 1px solid rgba($main-color, 0.2);
+          border-top-width: 3px;
+          transition: all 0.2s;
+          display: flex;
+          opacity: 0;
+          flex-direction: column;
+          gap: 12px;
+
+          > li {
+            white-space: nowrap;
+
+            > a {
+              transition: color 0.2s;
+              &:hover {
+                color: $main-color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
