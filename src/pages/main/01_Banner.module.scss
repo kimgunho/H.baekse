@@ -1,0 +1,22 @@
+@import '@/styles/common';
+
+.container {
+  position: relative;
+  line-height: 0;
+
+  > img {
+    width: 100%;
+  }
+  > strong {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3.375rem;
+    color: white;
+    text-align: center;
+    font-weight: 300;
+    line-height: 1.6;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+  }
+}

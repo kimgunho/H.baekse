@@ -8,6 +8,7 @@
   width: 100vw;
   height: 100vh;
   background-color: rgba(black, 0.4);
+  z-index: 100;
 
   &.active {
     display: block;

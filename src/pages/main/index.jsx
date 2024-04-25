@@ -1,11 +1,13 @@
-import classNames from 'classnames/bind';
-
-import styles from './index.module.scss';
-
-const cx = classNames.bind(styles);
+import Banner from './01_Banner';
+import Clinic from './02_Clinic';
 
 const Page = () => {
-  return <div className={cx('container')}>Main</div>;
+  return (
+    <>
+      <Banner />
+      <Clinic />
+    </>
+  );
 };
 
 export default Page;
