@@ -2,18 +2,18 @@
 
 .container {
   border-bottom: 1px solid #f0f0f0;
-  position: relative;
+  position: sticky;
+  top: 0;
   z-index: 10;
+  background-color: white;
 
   > .wrapper {
     @include layout;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: sticky;
     padding-top: 10px;
     padding-bottom: 10px;
-    top: 0;
 
     > .title {
       font-size: 1.25rem;
