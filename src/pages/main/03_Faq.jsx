@@ -16,6 +16,7 @@ const settings = {
   speed: 500,
   slidesToShow: 4,
   slidesToScroll: 1,
+  autoplay: true,
 };
 
 const Faq = () => {
