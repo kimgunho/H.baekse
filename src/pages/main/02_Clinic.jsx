@@ -6,13 +6,7 @@ import GNB from '@/define/gnb';
 
 import styles from './02_Clinic.module.scss';
 
-const menus = GNB.filter((data) => data.title.includes('클리닉')).map((menu, index) => ({
-  ...menu,
-  icons: {
-    color: `../public/icons/main_0${index + 1}_color.png`,
-    black: `../public/icons/main_0${index + 1}_black.png`,
-  },
-}));
+const menus = GNB.filter((data) => data.title.includes('클리닉'));
 const cx = classNames.bind(styles);
 
 const Clinic = () => {

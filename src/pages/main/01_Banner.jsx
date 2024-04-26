@@ -1,7 +1,7 @@
 import classNames from 'classnames/bind';
 
 import styles from './01_Banner.module.scss';
-import SRC from '@/assets/images/main/main_bg.jpg';
+import SRC from '../../../public/assets/images/main/main_bg.jpg';
 
 const cx = classNames.bind(styles);
 

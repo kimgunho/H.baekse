@@ -1,3 +1,14 @@
+import Icon01Black from '../../public/assets/images/icons/main_01_black.png';
+import Icon02Black from '../../public/assets/images/icons/main_02_black.png';
+import Icon03Black from '../../public/assets/images/icons/main_03_black.png';
+import Icon04Black from '../../public/assets/images/icons/main_04_black.png';
+import Icon05Black from '../../public/assets/images/icons/main_05_black.png';
+import Icon01Color from '../../public/assets/images/icons/main_01_color.png';
+import Icon02Color from '../../public/assets/images/icons/main_02_color.png';
+import Icon03Color from '../../public/assets/images/icons/main_03_color.png';
+import Icon04Color from '../../public/assets/images/icons/main_04_color.png';
+import Icon05Color from '../../public/assets/images/icons/main_05_color.png';
+
 const GNB = [
   {
     title: '한의원 소개',
@@ -11,6 +22,10 @@ const GNB = [
   {
     title: '교통사고 클리닉',
     link: '/sub01-01',
+    icons: {
+      color: Icon01Color,
+      black: Icon01Black,
+    },
     sub: [
       { title: '교통사고 클리닉', link: '/sub01-01' },
       { title: '진료&접수 절차', link: '/sub01-02' },
@@ -21,6 +36,10 @@ const GNB = [
   {
     title: '통증 클리닉',
     link: '/sub02-01',
+    icons: {
+      color: Icon02Color,
+      black: Icon02Black,
+    },
     sub: [
       { title: '구안와사 클리닉', link: '/sub02-01' },
       { title: '통증 클리닉', link: '/sub02-02' },
@@ -29,6 +48,10 @@ const GNB = [
   {
     title: '어린이 클리닉',
     link: '/sub03-01',
+    icons: {
+      color: Icon03Color,
+      black: Icon03Black,
+    },
     sub: [
       { title: '성장', link: '/sub03-01' },
       { title: '감기', link: '/sub03-02' },
@@ -44,6 +67,10 @@ const GNB = [
   {
     title: '여성 클리닉',
     link: '/sub04-01',
+    icons: {
+      color: Icon04Color,
+      black: Icon04Black,
+    },
     sub: [
       { title: '난임', link: '/sub04-01' },
       { title: '생리통', link: '/sub04-02' },
@@ -56,6 +83,10 @@ const GNB = [
   {
     title: '비만 클리닉',
     link: '/sub05',
+    icons: {
+      color: Icon05Color,
+      black: Icon05Black,
+    },
   },
   {
     title: '자주묻는 질문',
