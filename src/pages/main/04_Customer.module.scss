@@ -14,9 +14,16 @@
     > .maps {
       display: flex;
       gap: 2rem;
+      @include mobile {
+        flex-direction: column;
+        gap: 2.5rem;
+      }
 
       > .info {
         width: 50%;
+        @include mobile {
+          width: 100%;
+        }
 
         > .map {
           border: 0;
@@ -33,6 +40,10 @@
           > .tel {
             font-size: 2rem;
             color: $text-color-10;
+            @include mobile {
+              font-size: 20px;
+              font-weight: 600;
+            }
           }
           > .button {
             width: fit-content;

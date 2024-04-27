@@ -6,6 +6,10 @@
 
   > img {
     width: 100%;
+    @include mobile {
+      min-height: 300px;
+      object-fit: cover;
+    }
   }
   > strong {
     position: absolute;
@@ -18,5 +22,13 @@
     font-weight: 300;
     line-height: 1.6;
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    transition: font-size 0.2s;
+    @include tablet {
+      font-size: 38px;
+    }
+    @include mobile {
+      font-size: 28px;
+    }
   }
 }

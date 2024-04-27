@@ -1,4 +1,5 @@
 import classNames from 'classnames/bind';
+import { useEffect } from 'react';
 import { RiCloseFill } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 
@@ -9,6 +10,14 @@ import styles from './FullMenu.module.scss';
 const cx = classNames.bind(styles);
 
 const FullMenu = ({ active, close }) => {
+  useEffect(() => {
+    if (active) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  });
+
   return (
     <div className={cx('container', { active })}>
       <div className={cx('menus')}>

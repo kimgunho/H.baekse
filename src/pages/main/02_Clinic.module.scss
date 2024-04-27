@@ -5,17 +5,29 @@
     @include layout;
     display: flex;
     align-items: center;
+    @include mobile {
+      flex-direction: column;
+      align-items: flex-start;
+    }
 
     > .title {
       font-size: 2.125rem;
       color: $text-color-10;
+      @include mobile {
+        margin-top: 2.5rem;
+      }
     }
     > .menus {
       flex: 1;
       display: flex;
       align-items: center;
       justify-content: space-evenly;
-      padding: 40px 20px;
+      padding: 2.5rem 1.25rem;
+      @include mobile {
+        padding: 1.25rem 0;
+        width: 100%;
+        justify-content: space-between;
+      }
 
       > .button {
         display: flex;
@@ -26,6 +38,14 @@
         font-size: 1.25rem;
         gap: 0.75rem;
         transition: all 0.2s;
+        white-space: nowrap;
+        @include tablet {
+          font-size: 16px;
+        }
+        @include mobile {
+          font-size: 12px;
+          letter-spacing: -1px;
+        }
 
         &.active {
           color: $main-color;
@@ -35,6 +55,9 @@
           width: auto;
           height: 100%;
           max-height: 2.8125rem;
+          @include mobile {
+            height: 25px;
+          }
         }
       }
     }
@@ -42,7 +65,7 @@
   > .detail {
     background-color: $brown-color-10;
     width: 100%;
-    height: 60px;
+    padding: 1.25rem 0;
     display: flex;
     justify-content: center;
 
@@ -51,6 +74,10 @@
       display: flex;
       align-items: center;
       gap: 1.5rem;
+      @include tablet {
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
 
       > .link {
         width: fit-content;
@@ -66,10 +93,19 @@
         box-sizing: border-box;
         transition: all 0.2s;
         color: $text-color-10;
-
-        &:hover {
-          color: white;
-          background-color: $main-color;
+        @include tablet {
+          height: 25px;
+          font-size: 1rem;
+        }
+        @include mobile {
+          height: 20px;
+          font-size: 0.75rem;
+        }
+        @include isHover {
+          &:hover {
+            color: white;
+            background-color: $main-color;
+          }
         }
       }
     }

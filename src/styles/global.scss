@@ -9,9 +9,21 @@
   line-height: 1;
 }
 html {
+  min-width: 360px;
   font-size: 16px;
-  @include mobile {
+  @include tablet {
     font-size: 14px;
+  }
+}
+body {
+  &::-webkit-scrollbar {
+    background-color: rgba($main-color, 0.2);
+    width: 10px;
+    height: 0;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $main-color;
+    border-radius: 12px;
   }
 }
 a {

@@ -17,6 +17,26 @@ const settings = {
   slidesToShow: 4,
   slidesToScroll: 1,
   autoplay: true,
+  responsive: [
+    {
+      breakpoint: 1320,
+      settings: {
+        slidesToShow: 3,
+      },
+    },
+    {
+      breakpoint: 1080,
+      settings: {
+        slidesToShow: 2,
+      },
+    },
+    {
+      breakpoint: 760,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+  ],
 };
 
 const Faq = () => {

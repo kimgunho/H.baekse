@@ -14,11 +14,25 @@
       margin-bottom: 2.5rem;
     }
     > .faq {
+      > div > div {
+        // .slick-list
+        margin: 0 2em;
+        box-sizing: border-box;
+
+        > div {
+          > div {
+            // .slick-slide
+            padding: 0 0.9375rem;
+            box-sizing: border-box;
+          }
+        }
+      }
+
       .card {
+        box-sizing: border-box;
         background-color: white;
         padding: 1.875rem;
         border-radius: 1.875rem;
-        width: 15.625rem !important;
 
         > .title {
           font-size: 1.25rem;
@@ -60,10 +74,10 @@
         z-index: 10;
 
         &:first-of-type {
-          left: -1.25rem;
+          left: 0;
         }
         &:last-of-type {
-          right: -1.25rem;
+          right: 0;
         }
       }
     }

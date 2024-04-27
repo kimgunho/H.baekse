@@ -5,10 +5,11 @@
   position: fixed;
   left: 0;
   top: 0;
-  width: 100vw;
-  height: 100vh;
+  right: 0;
+  bottom: 0;
   background-color: rgba(black, 0.4);
   z-index: 100;
+  min-width: 360px;
 
   &.active {
     display: block;
@@ -22,19 +23,43 @@
     background-color: white;
     padding: 2rem;
     border-radius: 6px;
+    box-sizing: border-box;
+
+    @include tablet {
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      border-radius: 0;
+      transform: translate(0, 0);
+      background-color: $main-color;
+    }
 
     > .close {
       position: absolute;
       right: 1rem;
       top: 1rem;
+      color: $text-color-10;
+
+      @include tablet {
+        color: white;
+      }
     }
     > .gnb {
       display: flex;
       gap: 2rem;
       padding-right: 4rem;
 
+      @include tablet {
+        flex-wrap: wrap;
+      }
+
       > li {
         white-space: nowrap;
+
+        @include tablet {
+          width: 40%;
+        }
 
         > ul {
           display: flex;
@@ -42,15 +67,25 @@
           gap: 0.75rem;
 
           > li {
-            font-size: 0.875rem;
+            // font-size: 0.875rem;
 
             > a {
               display: block;
+              color: $text-color-10;
+
+              @include tablet {
+                color: white;
+              }
             }
           }
         }
         > .menu {
-          font-size: 0.875rem;
+          // font-size: 14px;
+          color: $text-color-10;
+
+          @include tablet {
+            color: white;
+          }
         }
       }
     }
