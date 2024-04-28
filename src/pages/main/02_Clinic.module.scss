@@ -11,10 +11,9 @@
     }
 
     > .title {
-      font-size: 2.125rem;
-      color: $text-color-10;
+      @include title;
       @include mobile {
-        margin-top: 2.5rem;
+        margin-top: 2rem;
       }
     }
     > .menus {

@@ -1,0 +1,111 @@
+@import '@/styles/common';
+
+.container {
+  > .top {
+    position: relative;
+    width: calc(100vw - 4rem);
+    height: calc(100vh - 8rem);
+    background: url('../../../../public/assets/images/sub/company/gree_bg.jpg') center center no-repeat;
+    background-size: cover;
+    margin: 2rem auto;
+    @include mobile {
+      min-width: 332px;
+      width: calc(100vw - 2rem);
+      height: calc(50vh - 6rem);
+      margin: 1rem auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    > .frame {
+      position: absolute;
+      width: 18.75rem;
+      z-index: -1;
+      height: 18.75rem;
+      background-color: $main-color;
+      &.left {
+        left: -2rem;
+        top: -2rem;
+        @include mobile {
+          top: -1rem;
+          left: -1rem;
+        }
+      }
+      &.right {
+        right: -2rem;
+        bottom: -2rem;
+        @include mobile {
+          bottom: -1rem;
+          right: -1rem;
+        }
+      }
+    }
+    > .greeting {
+      position: absolute;
+      right: 5%;
+      top: 10%;
+      color: white;
+      font-size: 2rem;
+      line-height: 1.6;
+      text-shadow: 2px 2px 13px rgba(black, 0.45);
+      @include mobile {
+        position: static;
+        text-align: center;
+        padding: 0 1rem;
+        font-size: 1.5rem;
+        word-break: keep-all;
+
+        > br {
+          display: none;
+        }
+      }
+
+      > .point {
+        color: $main-color;
+      }
+    }
+  }
+  > .bottom {
+    margin-top: 6.25rem;
+    margin-bottom: 6.25rem;
+
+    > .wrapper {
+      @include layout;
+
+      > .title {
+        @include title;
+        margin-bottom: 2.5rem;
+      }
+      > .box {
+        display: flex;
+        gap: 4rem;
+        align-items: center;
+
+        > .text {
+          flex: 1;
+
+          > .desc {
+            font-size: 1.125rem;
+            line-height: 1.6;
+            color: $text-color-20;
+            margin-bottom: 2.5rem;
+            word-break: keep-all;
+
+            @include tablet {
+              > br {
+                display: none;
+              }
+            }
+          }
+        }
+        > img {
+          width: 30rem;
+
+          @include mobile {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
