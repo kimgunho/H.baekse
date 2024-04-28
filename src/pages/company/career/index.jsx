@@ -1,6 +1,7 @@
 import classNames from 'classnames/bind';
 
 import styles from './index.module.scss';
+import SRC from '../../../../public/assets/images/sub/company/career.jpg';
 
 const cx = classNames.bind(styles);
 
@@ -28,7 +29,7 @@ const Page = () => {
             <p>대한 침구학회 회원</p>
             <p>대한 약침학회 회원 </p>
           </div>
-          <img src={'../../../../public/assets/images/sub/company/career.jpg'} alt="" />
+          <img src={SRC} alt="" />
         </div>
       </div>
     </div>
