@@ -22,8 +22,7 @@ const Customer = () => {
               <a className={cx('tel')} href="tel:0522894878">
                 울산본점 : 052-289-4878
               </a>
-              {/* TODO : 하단 페이지 생성 시 링크 추가 */}
-              <Link className={cx('button')} to={'/'}>
+              <Link className={cx('button')} to={'/direction'}>
                 오시는길
               </Link>
             </div>
@@ -45,8 +44,7 @@ const Customer = () => {
               <a className={cx('tel')} href="tel:0553886789">
                 양산점 : 055-388-6789
               </a>
-              {/* TODO : 하단 페이지 생성 시 링크 추가 */}
-              <Link className={cx('button')} to={'/'}>
+              <Link className={cx('button')} to={'/direction'}>
                 오시는길
               </Link>
             </div>
