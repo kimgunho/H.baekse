@@ -9,7 +9,7 @@ import styles from './FullMenu.module.scss';
 
 const cx = classNames.bind(styles);
 
-const FullMenu = ({ active, close }) => {
+const FullMenu = ({ active, close: closeModal }) => {
   useEffect(() => {
     if (active) {
       document.body.style.overflow = 'hidden';
@@ -17,6 +17,10 @@ const FullMenu = ({ active, close }) => {
       document.body.style.overflow = 'auto';
     }
   });
+
+  const close = () => {
+    if (active) closeModal();
+  };
 
   return (
     <div className={cx('container', { active })}>
@@ -31,12 +35,14 @@ const FullMenu = ({ active, close }) => {
                 <ul className={cx('subMenu')}>
                   {data.sub.map((subData) => (
                     <li key={subData.link}>
-                      <Link to={subData.link}>{subData.title}</Link>
+                      <Link onClick={close} to={subData.link}>
+                        {subData.title}
+                      </Link>
                     </li>
                   ))}
                 </ul>
               ) : (
-                <Link to={data.link} className={cx('menu')}>
+                <Link onClick={close} to={data.link} className={cx('menu')}>
                   {data.title}
                 </Link>
               )}
