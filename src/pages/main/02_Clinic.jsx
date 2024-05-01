@@ -2,22 +2,25 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import classNames from 'classnames/bind';
 
-import GNB from '@/define/gnb';
+import PAGES from '@/define/pages';
 
 import styles from './02_Clinic.module.scss';
 
-const menus = GNB.filter((data) => data.title.includes('클리닉'));
 const cx = classNames.bind(styles);
 
 const Clinic = () => {
-  const [activeLink, setActiveLink] = useState();
+  const [title, setTitle] = useState();
+  const clinics = Object.values(PAGES).filter((page) => {
+    const isClinic = page.title.includes('클리닉');
+    if (isClinic) return page.children;
+  });
 
   const onClick = (e) => {
-    const link = e.target.dataset.link;
-    if (activeLink === link) {
-      setActiveLink();
+    const currentTitle = e.target.dataset.title;
+    if (title === currentTitle) {
+      setTitle();
     } else {
-      setActiveLink(link);
+      setTitle(currentTitle);
     }
   };
 
@@ -29,34 +32,34 @@ const Clinic = () => {
           <br />
           바로가기
         </strong>
-        <div className={cx('menus')}>
-          {menus.map((menu) => {
-            const active = activeLink === menu.link;
+        <div className={cx('clinics')}>
+          {clinics.map((clinic) => {
+            const active = title === clinic.title;
 
             return (
               <button
                 onClick={onClick}
-                data-link={menu.link}
-                key={menu.link}
+                data-title={clinic.title}
+                key={clinic.title}
                 type="button"
                 className={cx('button', { active })}
-                aria-label={`${menu.title} 상세메뉴 ${active ? '닫기' : '열기'}`}
+                aria-label={`${clinic.title} 상세메뉴 ${active ? '닫기' : '열기'}`}
               >
-                <img src={active ? menu.icons.color : menu.icons.black} alt="" />
-                {menu.title}
+                <img src={active ? clinic.icons.color : clinic.icons.black} alt="" />
+                {clinic.title}
               </button>
             );
           })}
         </div>
       </div>
       <div className={cx('detail')}>
-        <div className={cx('subMenu')}>
-          {activeLink &&
-            menus
-              .find(({ link }) => link === activeLink)
-              ?.sub?.map((subMenu) => (
-                <Link to={subMenu.link} key={subMenu.link} className={cx('link')}>
-                  {subMenu.title}
+        <div className={cx('sub')}>
+          {title &&
+            clinics
+              .find((clinic) => clinic.title === title)
+              .children.map((sub) => (
+                <Link to={sub.link} key={sub.title} className={cx('link')}>
+                  {sub.title}
                 </Link>
               ))}
         </div>

@@ -37,24 +37,27 @@
       > li {
         position: relative;
         font-size: 1.125rem;
-
+        color: $text-color-10;
+        transition: color 0.2s;
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -100%;
+          left: 0;
+          right: 0;
+          height: 100%;
+        }
         &:hover {
-          > .menu {
-            color: $main-color;
-          }
-          > ul {
+          color: $main-color;
+
+          > .sub {
             visibility: visible;
             opacity: 1;
             top: 1.875rem;
           }
         }
 
-        > .menu {
-          color: $text-color-10;
-          transition: color 0.2s;
-          padding-bottom: 0.625rem;
-        }
-        > ul {
+        > .sub {
           visibility: hidden;
           position: absolute;
           top: 0;

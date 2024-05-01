@@ -3,7 +3,7 @@ import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';
 import { RiMenuFill } from 'react-icons/ri';
 
-import GNB from '@/define/gnb';
+import PAGES from '@/define/pages';
 
 import styles from './index.module.scss';
 import FullMenu from './FullMenu';
@@ -25,20 +25,16 @@ const Header = () => {
             <Link to={'/'}>건강백세한의원</Link>
           </strong>
           <ul className={cx('gnb')}>
-            {GNB.map((data) => (
-              <li key={data.link}>
-                <Link to={data.link} className={cx('menu')}>
-                  {data.title}
-                </Link>
-                {data.sub && (
-                  <ul className={cx('subMenu')}>
-                    {data.sub.map((subData) => (
-                      <li key={subData.link}>
-                        <Link to={subData.link}>{subData.title}</Link>
-                      </li>
-                    ))}
-                  </ul>
-                )}
+            {Object.values(PAGES).map((page) => (
+              <li key={page.title}>
+                {page.title}
+                <ul className={cx('sub')}>
+                  {page.children.map((sub) => (
+                    <li key={sub.title}>
+                      <Link to={sub.link}>{sub.title}</Link>
+                    </li>
+                  ))}
+                </ul>
               </li>
             ))}
           </ul>

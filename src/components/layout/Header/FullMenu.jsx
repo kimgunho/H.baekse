@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { RiCloseFill } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 
-import GNB from '@/define/gnb';
+import PAGES from '@/define/pages';
 
 import styles from './FullMenu.module.scss';
 
@@ -29,23 +29,18 @@ const FullMenu = ({ active, close: closeModal }) => {
           <RiCloseFill size={32} />
         </button>
         <ul className={cx('gnb')}>
-          {GNB.map((data) => (
-            <li key={data.link}>
-              {data.sub ? (
-                <ul className={cx('subMenu')}>
-                  {data.sub.map((subData) => (
-                    <li key={subData.link}>
-                      <Link onClick={close} to={subData.link}>
-                        {subData.title}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              ) : (
-                <Link onClick={close} to={data.link} className={cx('menu')}>
-                  {data.title}
-                </Link>
-              )}
+          {Object.values(PAGES).map((page) => (
+            <li key={page.title}>
+              <strong className={cx('title')}>{page.title}</strong>
+              <ul className={cx('sub')}>
+                {page.children.map((sub) => (
+                  <li key={sub.title}>
+                    <Link onClick={close} to={sub.link}>
+                      {sub.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </li>
           ))}
         </ul>

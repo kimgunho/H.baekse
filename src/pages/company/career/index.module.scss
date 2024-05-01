@@ -1,34 +1,28 @@
 @import '@/styles/common';
 
 .container {
-  @include wrapperMargin;
+  > .box {
+    display: flex;
+    gap: 4rem;
+    @include tablet {
+      flex-direction: column-reverse;
+    }
 
-  > .wrapper {
-    @include layout;
-
-    > .box {
-      display: flex;
-      gap: 4rem;
-      @include tablet {
-        flex-direction: column-reverse;
+    > .info {
+      flex: 1;
+      > strong {
+        font-size: 1.5rem;
+        color: $text-color-10;
+        margin-bottom: 1.25rem;
       }
-
-      > .info {
-        flex: 1;
-        > strong {
-          font-size: 1.5rem;
-          color: $text-color-10;
-          margin-bottom: 1.25rem;
-        }
-        > p {
-          line-height: 1.6;
-          color: $text-color-20;
-          font-size: 1.125rem;
-        }
+      > p {
+        line-height: 1.6;
+        color: $text-color-20;
+        font-size: 1.125rem;
       }
-      > img {
-        object-fit: cover;
-      }
+    }
+    > img {
+      object-fit: cover;
     }
   }
 }
