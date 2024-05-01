@@ -1,5 +1,7 @@
 import classNames from 'classnames/bind';
 
+import Title from '@/components/global/Title';
+
 import styles from './index.module.scss';
 import SRC from '../../../../public/assets/images/sub/company/career.jpg';
 
@@ -9,7 +11,7 @@ const Page = () => {
   return (
     <div className={cx('container')}>
       <div className={cx('wrapper')}>
-        <strong className={cx('title')}>의료진소개</strong>
+        <Title title="의료진소개" />
         <div className={cx('box')}>
           <div className={cx('info')}>
             <strong>대표원장 프로필</strong>

@@ -1,6 +1,8 @@
 import classNames from 'classnames/bind';
 import { RiBus2Fill, RiMapPinLine, RiWalkFill } from 'react-icons/ri';
 
+import Title from '@/components/global/Title';
+
 import styles from './index.module.scss';
 
 const cx = classNames.bind(styles);
@@ -9,8 +11,7 @@ const Page = () => {
   return (
     <div className={cx('container')}>
       <div className={cx('wrapper')}>
-        <strong className={cx('title')}>오시는길</strong>
-        <p className={cx('desc')}>대중교통, 도보등 편한 교통수단을 확인해주세요.</p>
+        <Title title="오시는길" desc="대중교통, 도보등 편한 교통수단을 확인해주세요." />
         <div className={cx('box')}>
           <div>
             <strong className={cx('title')}>울산 본점</strong>

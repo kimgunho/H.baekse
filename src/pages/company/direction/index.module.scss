@@ -6,15 +6,6 @@
   > .wrapper {
     @include layout;
 
-    > .title {
-      @include title;
-    }
-    > .desc {
-      font-size: 1.125rem;
-      color: $text-color-10;
-      margin-bottom: 2.5rem;
-      line-height: 2;
-    }
     > .box {
       display: flex;
       gap: 64px;

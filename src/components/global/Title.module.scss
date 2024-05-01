@@ -1,0 +1,14 @@
+@import '@/styles/common';
+
+.container {
+  margin-bottom: 2.5rem;
+
+  > .title {
+    @include title;
+  }
+  > .desc {
+    font-size: 1.125rem;
+    color: $text-color-20;
+    line-height: 2;
+  }
+}

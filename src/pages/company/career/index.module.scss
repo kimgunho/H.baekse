@@ -6,10 +6,6 @@
   > .wrapper {
     @include layout;
 
-    > .title {
-      @include title;
-      margin-bottom: 2.5rem;
-    }
     > .box {
       display: flex;
       gap: 4rem;
