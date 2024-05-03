@@ -1,4 +1,5 @@
 import { useRef } from 'react';
+import { Link } from 'react-router-dom';
 import classNames from 'classnames/bind';
 import Slider from 'react-slick';
 import { RiArrowDropRightLine, RiArrowLeftSLine, RiArrowRightSLine } from 'react-icons/ri';
@@ -6,7 +7,6 @@ import { RiArrowDropRightLine, RiArrowLeftSLine, RiArrowRightSLine } from 'react
 import QUESTIONS from '@/define/questions';
 
 import styles from './03_Faq.module.scss';
-import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 const settings = {

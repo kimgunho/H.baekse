@@ -1,7 +1,7 @@
 import classNames from 'classnames/bind';
+import { Link } from 'react-router-dom';
 
 import styles from './04_Customer.module.scss';
-import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 
