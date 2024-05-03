@@ -1,0 +1,75 @@
+@import '@/styles/common';
+
+.container {
+  .wrapper {
+    display: flex;
+    gap: 2rem;
+    @include tablet {
+      flex-direction: column;
+    }
+
+    > div {
+      width: 50%;
+      @include tablet {
+        width: 100%;
+      }
+
+      > strong {
+        font-size: 1.5rem;
+        color: $text-color-10;
+        font-weight: 600;
+        line-height: 1.8;
+      }
+      > img {
+        width: 100%;
+        border-radius: 30px;
+      }
+      > p {
+        font-size: 1.125rem;
+        color: $text-color-20;
+        margin-bottom: 1.25rem;
+        word-break: keep-all;
+        line-height: 1.6;
+        margin-top: 1.25rem;
+        width: 80%;
+        @include mobile {
+          width: 100%;
+        }
+      }
+
+      > .list {
+        margin-top: 2.5rem;
+
+        > li {
+          position: relative;
+          margin-bottom: 2.5rem;
+          padding-left: 1.25rem;
+          &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            height: 100%;
+            background-color: #f0f0f0;
+          }
+
+          > .title {
+            font-size: 1.25rem;
+            color: $text-color-10;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+          }
+          > .desc {
+            font-size: 1rem;
+            color: $text-color-20;
+            line-height: 1.6;
+            word-break: keep-all;
+          }
+        }
+      }
+    }
+  }
+}
