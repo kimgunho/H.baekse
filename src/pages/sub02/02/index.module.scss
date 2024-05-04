@@ -1,0 +1,101 @@
+@import '@/styles/common';
+
+.container {
+  > .wrapper {
+    > * {
+      margin-bottom: 5rem;
+    }
+    > .flex {
+      display: flex;
+      gap: 2.5rem;
+      @include tablet {
+        flex-wrap: wrap;
+      }
+      @include mobile {
+        flex-direction: column;
+      }
+
+      > .box {
+        width: 25%;
+        @include tablet {
+          width: calc(50% - 1.5rem);
+        }
+        @include mobile {
+          width: 100%;
+        }
+
+        > strong {
+          font-size: 1.5rem;
+          color: $text-color-10;
+          white-space: nowrap;
+          line-height: 1.8;
+          margin-bottom: 0.5rem;
+        }
+        > .info {
+          > img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 1.25rem;
+            @include mobile {
+              width: 80%;
+            }
+          }
+          > p {
+            font-size: 1.125rem;
+            color: $text-color-20;
+            line-height: 1.8;
+            word-break: keep-all;
+          }
+        }
+      }
+    }
+    > .box {
+      > .title {
+        font-size: 1.5rem;
+        color: $text-color-10;
+        white-space: nowrap;
+        line-height: 1.8;
+        margin-bottom: 1.25rem;
+      }
+      > .list {
+        display: flex;
+        gap: 1.5rem;
+        @include tablet {
+          flex-wrap: wrap;
+        }
+
+        > li {
+          width: 16.66667%;
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          @include tablet {
+            width: calc(33.3334% - 1rem);
+          }
+          @include mobile {
+            width: calc(50% - 1rem);
+          }
+
+          > img {
+            width: 100%;
+            border-radius: 8px;
+            object-fit: cover;
+            @include mobile {
+              width: 80%;
+            }
+          }
+          > strong {
+            color: $text-color-10;
+            font-size: 1.25rem;
+          }
+          > p {
+            color: $text-color-20;
+            font-size: 1rem;
+            word-break: keep-all;
+            line-height: 1.8;
+          }
+        }
+      }
+    }
+  }
+}
