@@ -1,0 +1,98 @@
+@import '@/styles/common';
+
+.container {
+  > .wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    @include mobile {
+      flex-direction: column;
+    }
+
+    > * {
+      > strong {
+        font-size: 1.5rem;
+        color: $text-color-10;
+        font-weight: 600;
+        line-height: 1.8;
+        margin-bottom: 1.25rem;
+      }
+      &.cure {
+        width: 70%;
+        @include mobile {
+          width: 100%;
+        }
+
+        > .list {
+          display: flex;
+          flex-flow: row wrap;
+          gap: 1.5rem;
+
+          > li {
+            flex-basis: calc(33.334% - 1rem);
+            box-sizing: border-box;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            @include tablet {
+              flex-basis: calc(50% - 1rem);
+            }
+            @include isHover {
+              &:hover {
+                opacity: 1;
+              }
+            }
+
+            > img {
+              width: 100%;
+              object-fit: cover;
+              border-radius: 8px;
+            }
+            > strong {
+              font-size: 1.25rem;
+              color: $text-color-10;
+            }
+            > p {
+              font-size: 1rem;
+              color: $text-color-20;
+              line-height: 1.8;
+              word-break: keep-all;
+            }
+          }
+        }
+      }
+      &.benefits {
+        width: 30%;
+        position: sticky;
+        top: 6.25rem;
+        @include mobile {
+          width: 100%;
+          order: -1;
+          position: static;
+        }
+
+        > .list {
+          display: flex;
+          flex-direction: column;
+          gap: 1.25rem;
+
+          > li {
+            color: $text-color-20;
+            font-size: 1.125rem;
+            display: flex;
+            align-items: center;
+            line-height: 1.6;
+            word-break: keep-all;
+            gap: 6px;
+
+            > svg {
+              flex-shrink: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

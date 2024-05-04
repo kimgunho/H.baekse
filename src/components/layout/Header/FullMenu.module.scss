@@ -85,6 +85,11 @@
                 &:hover {
                   color: $main-color;
                 }
+                @include tablet {
+                  &:hover {
+                    color: white;
+                  }
+                }
               }
               @include tablet {
                 color: #f0f0f0;

@@ -19,6 +19,24 @@
         line-height: 1.6;
         color: $text-color-20;
         font-size: 1.125rem;
+
+        &.bold {
+          font-weight: 600;
+          color: $text-color-10;
+        }
+      }
+      > ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+
+        > li {
+          color: $text-color-20;
+          font-size: 1.125rem;
+          display: flex;
+          align-items: center;
+          gap: 6px;
+        }
       }
     }
     > img {

@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useEffect, useMemo } from 'react';
 import { Outlet } from 'react-router-dom';
 import classNames from 'classnames/bind';
 import { useLocation } from 'react-router-dom';
@@ -14,6 +14,10 @@ const cx = classNames.bind(styles);
 
 const Content = () => {
   const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   const wrap = useMemo(() => {
     if (pathname === '/') {
