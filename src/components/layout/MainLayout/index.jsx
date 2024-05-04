@@ -43,8 +43,8 @@ const Content = () => {
   return (
     <>
       <Header />
+      {pages.length !== 0 && <Nav pages={pages} />}
       <main className={cx('container', { wrap })}>
-        {pages.length !== 0 && <Nav pages={pages} />}
         <Outlet />
       </main>
       <Footer />

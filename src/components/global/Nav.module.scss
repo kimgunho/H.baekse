@@ -1,15 +1,16 @@
 @import '@/styles/common';
 
 .container {
-  margin-bottom: 80px;
+  @include layout;
+  margin: 80px auto;
   display: flex;
   gap: 12px;
   @include tablet {
-    margin-bottom: 60px;
+    margin: 60px auto;
     flex-wrap: wrap;
   }
   @include mobile {
-    margin-bottom: 40px;
+    margin: 40px auto;
   }
   > .link {
     background-color: white;
