@@ -1,0 +1,71 @@
+@import '@/styles/common';
+
+.container {
+  > .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+
+    > .part {
+      background-color: #02a09808;
+      padding: 2rem;
+      border-top: 1px solid $main-color;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      @include mobile {
+        flex-direction: column;
+      }
+
+      > strong {
+        font-size: 1.5rem;
+        color: $text-color-10;
+        font-weight: 600;
+        margin-bottom: 1.25rem;
+        line-height: 1.6;
+        width: 30%;
+        padding-right: 2rem;
+        box-sizing: border-box;
+        @include mobile {
+          width: 100%;
+        }
+      }
+      > p {
+        font-size: 1.25rem;
+        color: $text-color-20;
+        line-height: 2;
+        word-break: keep-all;
+        width: 70%;
+        @include mobile {
+          width: 100%;
+
+          > br {
+            display: none;
+          }
+        }
+      }
+      > .list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 70%;
+        @include mobile {
+          width: 100%;
+        }
+
+        > li {
+          font-size: 1.25rem;
+          color: $text-color-20;
+          line-height: 2;
+          gap: 6px;
+          word-break: keep-all;
+          display: flex;
+          align-items: center;
+          > svg {
+            flex-shrink: 0;
+          }
+        }
+      }
+    }
+  }
+}
