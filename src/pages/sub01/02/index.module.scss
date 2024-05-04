@@ -29,7 +29,7 @@
         color: $text-color-20;
         margin-bottom: 1.25rem;
         word-break: keep-all;
-        line-height: 1.6;
+        line-height: 1.8;
         margin-top: 1.25rem;
         width: 80%;
         @include mobile {
@@ -60,12 +60,12 @@
             color: $text-color-10;
             font-weight: 600;
             margin-bottom: 1rem;
-            line-height: 1.6;
+            line-height: 1.8;
           }
           > .desc {
             font-size: 1rem;
             color: $text-color-20;
-            line-height: 1.6;
+            line-height: 1.8;
             word-break: keep-all;
           }
         }

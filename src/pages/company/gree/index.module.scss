@@ -46,7 +46,7 @@
       top: 10%;
       color: white;
       font-size: 2rem;
-      line-height: 1.6;
+      line-height: 1.8;
       text-shadow: 2px 2px 13px rgba(black, 0.45);
       @include mobile {
         position: static;
@@ -85,7 +85,7 @@
 
           > .desc {
             font-size: 1.125rem;
-            line-height: 1.6;
+            line-height: 1.8;
             color: $text-color-20;
             margin-bottom: 2.5rem;
             word-break: keep-all;

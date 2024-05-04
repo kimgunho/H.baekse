@@ -1,0 +1,210 @@
+@import '@/styles/common';
+
+.container {
+  > .wrapper {
+    > .part {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      margin-bottom: 5rem;
+      width: 100%;
+
+      > .flex {
+        display: flex;
+        gap: 4rem;
+        @include mobile {
+          flex-direction: column;
+        }
+      }
+      .box {
+        width: 100%;
+        &.half {
+          width: 50%;
+          @include mobile {
+            width: 100%;
+          }
+        }
+
+        > .flex {
+          display: flex;
+          gap: 2rem;
+          @include mobile {
+            flex-direction: column;
+          }
+
+          > img {
+            width: 20rem;
+            object-fit: cover;
+            @include mobile {
+              height: 100%;
+              order: -1;
+            }
+          }
+        }
+        .desc {
+          font-size: 1.125rem;
+          color: $text-color-20;
+          line-height: 1.8;
+          word-break: keep-all;
+          @include mobile {
+            > br {
+              display: none;
+            }
+          }
+
+          > .point {
+            color: $main-color;
+            display: block;
+            line-height: 1.8;
+          }
+        }
+        > .title {
+          font-size: 1.5rem;
+          color: $text-color-10;
+          line-height: 1.8;
+          margin-bottom: 1.25rem;
+        }
+        > .step {
+          display: flex;
+          align-items: center;
+          margin-bottom: 2.5rem;
+          width: 100%;
+          padding: 0 1.875rem;
+          box-sizing: border-box;
+          @include mobile {
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 0;
+            flex-wrap: wrap;
+          }
+
+          > li {
+            margin-left: -1.875rem;
+            width: 100%;
+            aspect-ratio: 1/1;
+            border: 1px solid $main-color;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 1rem;
+            color: $text-color-20;
+            line-height: 1.8;
+            @include mobile {
+              border: 0;
+              width: 45%;
+              justify-content: flex-start;
+              align-items: flex-start;
+              aspect-ratio: auto;
+              height: auto;
+              margin-left: 0;
+              text-align: left;
+              white-space: nowrap;
+
+              > br {
+                display: none;
+              }
+            }
+
+            > span {
+              font-size: 1.25rem;
+              display: block;
+              color: $main-color;
+              font-weight: 600;
+              margin-bottom: 1rem;
+              @include mobile {
+                margin-bottom: 4px;
+              }
+            }
+          }
+        }
+        > .possibilities {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+
+          > li {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 1.125rem;
+            color: $text-color-20;
+
+            > svg {
+              flex-shrink: 0;
+            }
+          }
+        }
+        > .list {
+          margin-top: 2.5rem;
+
+          > li {
+            position: relative;
+            margin-bottom: 1.5rem;
+            padding-left: 1.25rem;
+            &::before {
+              content: '';
+              position: absolute;
+              left: 0;
+              top: 0;
+              bottom: 0;
+              width: 2px;
+              height: 100%;
+              background-color: #f0f0f0;
+            }
+
+            > .title {
+              font-size: 1.25rem;
+              color: $text-color-10;
+              font-weight: 600;
+              margin-bottom: 1rem;
+              line-height: 1.8;
+            }
+            > .desc {
+              font-size: 1rem;
+              color: $text-color-20;
+              line-height: 1.8;
+              word-break: keep-all;
+            }
+          }
+        }
+        > .program {
+          display: flex;
+          align-items: center;
+          margin-top: 2.5rem;
+          width: 100%;
+          padding: 0 1.875rem;
+          box-sizing: border-box;
+          @include mobile {
+            flex-wrap: wrap;
+            padding: 0 1.25rem;
+          }
+
+          > li {
+            margin-left: -1.875rem;
+            width: 100%;
+            aspect-ratio: 1/1;
+            border: 1px solid $main-color;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 1.5rem;
+            color: $main-color;
+            line-height: 1.8;
+            @include mobile {
+              margin-left: -1.25rem;
+              width: 34%;
+              margin-bottom: -1.875rem;
+              font-size: 1.25rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
