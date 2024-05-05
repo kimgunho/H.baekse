@@ -10,7 +10,7 @@ const cx = classNames.bind(styles);
 const Page = () => {
   return (
     <div className={cx('container')}>
-      <Title title="오시는길" desc="대중교통, 도보등 편한 교통수단을 확인해주세요." />
+      <Title title="오시는길" desc={['대중교통, 도보등 편한 교통수단을 확인해주세요.']} />
       <div className={cx('box')}>
         <div>
           <strong className={cx('title')}>울산 본점</strong>

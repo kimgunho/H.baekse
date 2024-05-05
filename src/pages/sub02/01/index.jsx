@@ -11,7 +11,10 @@ const cx = classNames.bind(styles);
 const Page = () => {
   return (
     <div className={cx('container')}>
-      <Title title="구안와사 클리닉" desc="구안와사는 조기에 치료, 관리를 잘 받아야 후유증을 최소화 할 수 있습니다." />
+      <Title
+        title="구안와사 클리닉"
+        desc={['구안와사는 조기에 치료, 관리를 잘 받아야 후유증을 최소화 할 수 있습니다.']}
+      />
       <div className={cx('wrapper')}>
         <div className={cx('part')}>
           <div className={cx('box')}>

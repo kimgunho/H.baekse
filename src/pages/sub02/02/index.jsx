@@ -19,7 +19,7 @@ const cx = classNames.bind(styles);
 const Page = () => {
   return (
     <div className={cx('container')}>
-      <Title title="통증 클리닉" desc="통증은 우리 몸의 이상 신호입니다. 참으면 더 큰 병이 될 수도 있습니다." />
+      <Title title="통증 클리닉" desc={['통증은 우리 몸의 이상 신호입니다. 참으면 더 큰 병이 될 수도 있습니다.']} />
       <div className={cx('wrapper')}>
         <div className={cx('flex')}>
           <div className={cx('box')}>

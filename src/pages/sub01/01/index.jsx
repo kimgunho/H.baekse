@@ -21,7 +21,7 @@ const Page = () => {
     <div className={cx('container')}>
       <Title
         title="교통사고클리닉"
-        desc="교통사고 환자는 침, 뜸, 부항, 한약 한방물리치료까지 모든 한방치료가 가능합니다."
+        desc={['교통사고 환자는 침, 뜸, 부항, 한약 한방물리치료까지 모든 한방치료가 가능합니다.']}
       />
       <div className={cx('wrapper')}>
         <div>

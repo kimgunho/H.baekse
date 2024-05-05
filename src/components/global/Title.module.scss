@@ -7,8 +7,11 @@
     @include title;
   }
   > .desc {
-    font-size: 1.125rem;
-    color: $text-color-20;
-    line-height: 2;
+    > span {
+      font-size: 1.125rem;
+      color: $text-color-20;
+      line-height: 2;
+      display: block;
+    }
   }
 }

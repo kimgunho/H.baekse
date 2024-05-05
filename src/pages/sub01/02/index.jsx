@@ -10,7 +10,7 @@ const cx = classNames.bind(styles);
 const Page = () => {
   return (
     <div className={cx('container')}>
-      <Title title="진료&접수 절차" desc="교통사고 후유증과 관련된 모든 치료가 가능합니다." />
+      <Title title="진료&접수 절차" desc={['교통사고 후유증과 관련된 모든 치료가 가능합니다.']} />
       <div className={cx('wrapper')}>
         <div>
           <p>
