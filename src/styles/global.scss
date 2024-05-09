@@ -1,14 +1,18 @@
 @import './common.scss';
 @import './font.scss';
 
-* {
+*,
+*::before,
+*::after {
   padding: 0;
   margin: 0;
   font-family: 'NanumSquareRound', sans-serif;
-  user-select: none;
-  line-height: 1;
+  box-sizing: border-box;
 }
 html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
   min-width: 360px;
   font-size: 16px;
   @include tablet {
@@ -19,6 +23,7 @@ html {
   }
 }
 body {
+  min-height: 100vh;
   &::-webkit-scrollbar {
     background-color: #f0f0f0;
     width: 8px;
@@ -28,6 +33,18 @@ body {
     background: $brown-color-10;
     border-radius: 4px;
   }
+}
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+span,
+strong,
+div {
+  word-break: keep-all;
+  text-wrap: balance;
 }
 a {
   text-decoration: none;
@@ -39,7 +56,8 @@ strong {
 img {
   pointer-events: none;
 }
-ul {
+ul,
+ol {
   list-style: none;
   padding: 0;
 }
