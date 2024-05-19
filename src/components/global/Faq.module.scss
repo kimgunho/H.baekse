@@ -1,0 +1,25 @@
+@import '@/styles/common';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  > li {
+    > .question {
+      font-size: 1.25rem;
+      color: $text-color-10;
+      line-height: 1.8;
+      margin-bottom: 0.5rem;
+    }
+    > .answer {
+      font-size: 1.125rem;
+      color: $text-color-20;
+      line-height: 1.8;
+      word-break: keep-all;
+      padding: 2rem;
+      box-sizing: border-box;
+      background-color: #f9f9f9;
+    }
+  }
+}
