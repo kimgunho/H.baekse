@@ -1,0 +1,51 @@
+@import '@/styles/common';
+
+.container {
+  display: flex;
+  gap: 2rem;
+  @include mobile {
+    flex-direction: column;
+  }
+
+  > .contents {
+    > .desc {
+      font-size: 1.125rem;
+      color: $text-color-20;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+    > .step {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      grid-gap: 1.5rem;
+      @include tablet {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @include mobile {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      > li {
+        font-size: 1.125rem;
+        color: $text-color-10;
+        white-space: nowrap;
+        border: 1px solid rgba(#00a098, 0.2);
+        padding: 16px;
+
+        > .no {
+          color: #00a098;
+        }
+      }
+    }
+  }
+  > img {
+    width: 100%;
+    object-fit: cover;
+    max-width: 40%;
+    border-radius: 8px;
+    @include mobile {
+      display: none;
+    }
+  }
+}

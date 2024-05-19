@@ -1,0 +1,12 @@
+@import '@/styles/common';
+
+.title {
+  color: $text-color-10;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+
+  &.level {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+}
