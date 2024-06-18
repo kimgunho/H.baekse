@@ -4,7 +4,6 @@ import Title from '@/components/global/Title';
 import Desc from '@/components/global/Desc';
 import SubTitle from '@/components/global/SubTitle';
 import List from '@/components/global/List';
-import Faq from '@/components/global/Faq';
 import SKIN from '../../../../public/assets/images/sub/sub06/1.jpeg';
 
 import styles from './index.module.scss';

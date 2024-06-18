@@ -1,0 +1,178 @@
+@import '@/styles/common';
+
+.container {
+  margin: 80px auto;
+  @include tablet {
+    margin: 60px auto;
+  }
+  @include mobile {
+    margin: 40px auto;
+  }
+  > .wrap {
+    @include layout;
+  }
+
+  > .part {
+    padding: 6.25rem 0;
+    position: relative;
+    &.part01 {
+      background-color: #f2f2f2;
+    }
+
+    > .wrap {
+      @include layout;
+
+      > .bg {
+        position: relative;
+        min-height: 500px;
+
+        > .lines {
+          pointer-events: none;
+          width: 100%;
+
+          > .line {
+            width: 1px;
+            height: 100%;
+            background-color: #ddd;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            &:nth-of-type(1) {
+              left: 25%;
+              @include mobile {
+                display: none;
+              }
+            }
+            &:nth-of-type(2) {
+              left: 50%;
+            }
+            &:nth-of-type(3) {
+              left: 75%;
+              @include mobile {
+                display: none;
+              }
+            }
+          }
+        }
+        > .title {
+          font-size: 3.125rem;
+          color: #333;
+          font-weight: 300;
+          margin-bottom: 3.75rem;
+          position: relative;
+          z-index: 1;
+          width: fit-content;
+          &.bg {
+            background-color: #f2f2f2;
+          }
+        }
+        > .items {
+          position: relative;
+          z-index: 1;
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 3.75rem;
+          @include mobile {
+            flex-direction: column;
+            gap: 24px;
+          }
+
+          > .item {
+            width: calc(50% - 24px);
+            @include mobile {
+              width: 100%;
+            }
+            &:last-of-type {
+              transform: translateY(-100px);
+              @include mobile {
+                transform: translateY(0);
+              }
+            }
+
+            > img {
+              width: 100%;
+              max-width: 560px;
+              border-radius: 6px;
+              @include mobile {
+                max-width: 90%;
+              }
+            }
+            > .title {
+              font-size: 1.5rem;
+              color: #333;
+              line-height: 1.6;
+              margin-bottom: 1rem;
+              font-weight: 600;
+              background-color: #f2f2f2;
+            }
+            > .desc {
+              background-color: #f2f2f2;
+              font-size: 1.25rem;
+              color: #666;
+              line-height: 1.6;
+            }
+          }
+        }
+        > .flex {
+          display: flex;
+          justify-content: space-between;
+          position: relative;
+          @include mobile {
+            flex-direction: column;
+          }
+          &::before {
+            content: '';
+            width: 1px;
+            height: 100%;
+            background-color: #ddd;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            @include mobile {
+              display: none;
+            }
+          }
+
+          > * {
+            width: calc(50% - 24px);
+            @include mobile {
+              width: 100%;
+            }
+
+            &.list {
+              display: flex;
+              flex-direction: column;
+              gap: 24px;
+
+              > .item {
+                &:not(&:last-of-type) {
+                  margin-bottom: 2rem;
+                }
+                > .title {
+                  font-size: 1.25rem;
+                  font-weight: 600;
+                  margin-bottom: 1rem;
+                  color: #333;
+                }
+                > .desc {
+                  color: #666;
+                  font-size: 1.125rem;
+                  line-height: 1.6;
+                  &:not(&:last-of-type) {
+                    margin-bottom: 1rem;
+                  }
+                }
+                > .point {
+                  margin-top: 1rem;
+                  color: #00a098;
+                  font-size: 1rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -180,7 +180,7 @@ const PAGES = {
       {
         title: '비만 클리닉',
         link: '/sub05',
-        wrap: true,
+        wrap: false,
       },
     ],
   },
