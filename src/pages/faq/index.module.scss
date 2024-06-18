@@ -1,0 +1,77 @@
+@import '@/styles/common';
+
+.container {
+  > .field {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    margin-left: auto;
+    width: fit-content;
+    gap: 1rem;
+
+    > p {
+      font-size: 1rem;
+      color: #666;
+    }
+    > input {
+      width: 12.5rem;
+      height: 2rem;
+      padding: 6px;
+      border: 1px solid #ddd;
+      font-size: 16px;
+      color: #666;
+    }
+  }
+  > .list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border-top: 1px solid $main-color;
+    padding: 3.75rem 0;
+
+    > .item {
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      > .top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+
+        > .button {
+          display: flex;
+          align-items: center;
+          gap: 1.5rem;
+
+          > .no {
+            font-size: 4rem;
+            color: #999;
+          }
+          > .question {
+            font-size: 2rem;
+            color: #333;
+          }
+        }
+      }
+      > .answer {
+        visibility: hidden;
+        height: 0;
+        opacity: 0;
+        background-color: #f9f9f9;
+        padding: 1rem;
+        color: #666;
+        font-size: 1.25rem;
+        line-height: 1.6;
+
+        &.visible {
+          visibility: visible;
+          opacity: 1;
+          height: auto;
+        }
+      }
+    }
+  }
+}

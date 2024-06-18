@@ -60,7 +60,7 @@ const Faq = () => {
               <div key={index} className={cx('card')}>
                 <strong className={cx('title')}>{question.q}</strong>
                 <p className={cx('content')}>{question.a}</p>
-                <Link to={'/faq'}>
+                <Link to={`/faq#${index}`}>
                   자세히보기 <RiArrowDropRightLine size={24} />
                 </Link>
               </div>

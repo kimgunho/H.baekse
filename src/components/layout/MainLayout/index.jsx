@@ -13,11 +13,13 @@ import Footer from '../Footer';
 const cx = classNames.bind(styles);
 
 const Content = () => {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    if (!hash) {
+      window.scrollTo(0, 0);
+    }
+  }, [pathname, hash]);
 
   const wrap = useMemo(() => {
     if (pathname === '/') {
