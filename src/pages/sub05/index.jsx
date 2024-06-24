@@ -2,7 +2,7 @@ import classNames from 'classnames/bind';
 
 import Title from '@/components/global/Title';
 import Desc from '@/components/global/Desc';
-import SubTitle from '@/components/global/Subtitle';
+import SubTitle from '@/components/global/SubTitle';
 import DIET01 from '../../../public/assets/images/sub/sub05/04.jpeg';
 import DIET02 from '../../../public/assets/images/sub/sub05/02.jpeg';
 import DIET03 from '../../../public/assets/images/sub/sub05/03.jpeg';
