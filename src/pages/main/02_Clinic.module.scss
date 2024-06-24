@@ -64,7 +64,7 @@
   > .detail {
     background-color: $brown-color-10;
     width: 100%;
-    padding: 1.25rem 0;
+    padding: 8px 0;
     display: flex;
     justify-content: center;
 
@@ -98,8 +98,8 @@
           font-size: 1rem;
         }
         @include mobile {
-          height: 20px;
-          font-size: 0.75rem;
+          height: 100%;
+          font-size: 14px;
         }
         @include isHover {
           &:hover {
